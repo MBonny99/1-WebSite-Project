@@ -1,0 +1,20 @@
+[
+    {
+        "nome": "Marco",
+        "cognome": "Bonito",
+        "email": "mbonito@gmail.com",
+        "categoria": "Categoria 3",
+        "balance": "27520",
+        "stipendio": "1250",
+        "entrate": "500"
+    },
+    {
+        "nome": "G",
+        "cognome": "G",
+        "email": "G@G.com",
+        "categoria": "Categoria 1",
+        "balance": "1111111",
+        "stipendio": "11111",
+        "entrate": "1111"
+    }
+]
