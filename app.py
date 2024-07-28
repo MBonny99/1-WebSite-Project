@@ -15,9 +15,21 @@ def home():
 def portfolio():
     return render_template('portfolio.html')
 
+@app.route('/progetti')
+def progetti():
+    return render_template('progetti_in_corso.html')
+
 @app.route('/finanze')
 def finanza():
     return render_template('finanza.html')
+
+@app.route('/carriera')
+def carriera():
+    return render_template('carriera.html')
+
+@app.route('/contatti')
+def contatti():
+    return render_template('contatti.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
