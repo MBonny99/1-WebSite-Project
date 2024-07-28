@@ -1,14 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
     let main = document.getElementById("main_component");
 
-    let descrizionePersonale = createCard(
-        "description_card",
-        "Chi Sono?",
-        "Ciao a tutti sono Marco Bonito",
-        ["11/10/2001", "11/10/2024"],
-        "static/images/img.png",
-        function() { alert("Card cliccata!"); }
-    );
+    const createdElements = createBlank({
+        "main_div" : "div",
+        "second_div" : "div"
+    });
 
-    main.appendChild(descrizionePersonale);
+    console.log(createdElements.main_div);
+    console.log(createdElements.second_div);
 });
+
+function createBlank(elements = {} , target = "main_component") {
+    const createdElements = {};
+
+    for (const key in elements) {
+        if (elements.hasOwnProperty(key)) {
+            const element = document.createElement(elements[key]);
+            element.id = key;
+            createdElements[key] = element;
+
+            const html_target = document.getElementById(target);
+            if (html_target) {
+                html_target.appendChild(element);
+            }
+        }
+    }
+
+    return createdElements;
+}
