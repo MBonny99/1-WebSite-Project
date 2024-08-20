@@ -25,6 +25,5 @@ function createBlank(elements = {} , target = "main_component") {
             }
         }
     }
-
     return createdElements;
 }
